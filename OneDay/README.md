@@ -1,6 +1,6 @@
 ﻿#BootStrap简介
 
-##什么是BootStrap
+##什么是BootStrap 
 
 它由Twitter的设计师Mark Otto和Jacob Thornton合作开发。
 基于 HTML、CSS、JAVASCRIPT。
