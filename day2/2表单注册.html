@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--判断IE9  用来支持HTML5  
+		html5shiv.min.js-没有那个元素，就创建那个元素
+		respond.min.js支持响应式布局的
+		-->
+		<!--[if lt IE 9]> 
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+		<title>BootStrap基础入门</title>
+	</head>
+
+	<body style="background-color: #CCCCCC;">
+		<div class="container" style="background-color: #FFFFFF;">
+			<form class="form-horizontal">
+				<!--表单中的栅栏系统用form-horizontal，其他的用row -->
+				<h1>用户注册表单</h1>
+				<div class="form-group">
+					<!--control-label控制label和input之间的水平距离 -->
+					<label class="col-md-2 control-label" for="username">用户名</label>
+					<div class="col-md-10">
+						<input type="text" class="form-control" id="username" placeholder="请输入用户名" disabled="disabled" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label" for="password">密码</label>
+					<div class="col-md-10">
+						<input type="password" class="form-control" id="password" placeholder="请输入密码" />
+					</div>
+				</div>
+				<!--
+                	作者：chenhaoxiang@chaojijuhui.com
+                	时间：2017-01-18
+                	描述：sr-only -隐藏元素
+                -->
+				<div class="form-group sr-only">
+					<label class="col-md-2 control-label" for="email">邮箱</label>
+					<div class="col-md-10">
+						<input type="email" class="form-control" id="email" placeholder="请输入邮箱" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">上传图片</label>
+					<div class="col-md-10">
+						<input type="file" />
+						<!--
+                    	作者：chenhaoxiang@chaojijuhui.com
+                    	时间：2017-01-18
+                    	描述：class="help-block" 帮助信息以块显示- 间距变长了点，颜色变淡了。
+                    -->
+						<p class="help-block">上传的图片类型只能是:.jpg/.gif/.png</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">兴趣爱好:</label>
+					<div class="col-md-10">
+						<label class="checkbox-inline">
+							<input type="checkbox" value="画画" />画画
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" value="音乐" />音乐
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" value="体育" />体育
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" value="唱歌" />唱歌
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">学历:</label>
+					<div class="col-md-10">
+						<label class="radio-inline">
+							<input type="radio" name="xueli"/>小学
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="xueli"/>初中
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="xueli"/>高中
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="xueli"/>大专
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="xueli"/>本科
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-2 control-label">个人简介:</label>
+					<div class="col-md-10">
+						<textarea class="form-control" rows="5" placeholder="请输入你的个人简介信息"></textarea>
+					</div>
+				</div>
+				<div class="col-md-10 col-md-offset-2">
+					<button type="button" class="btn btn-default btn-lg">提交表单</button>
+				</div>
+				<!--
+                	作者：chenhaoxiang@chaojijuhui.com
+                	时间：2017-01-18
+                	描述：opacity透明度
+                -->
+				<button type="button" class="btn btn-lg btn-primary " style="opacity: 0.5;">Primary button</button>
+				<button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+			</form>
+
+		</div>
+		<script type="text/javascript" src="js/jquery.slim.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
