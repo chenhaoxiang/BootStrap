@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<!--判断IE9  用来支持HTML5  
+		html5shiv.min.js-没有那个元素，就创建那个元素
+		respond.min.js支持响应式布局的
+		-->
+		<!--[if lt IE 9]> 
+      	<script src="js/html5shiv.min.js"></script>
+      	<script src="js/respond.min.js"></script>
+    	<![endif]-->
+		<title>BootStrap基础入门</title>
+	</head>
+
+	<body style="background-color: #CCCCCC;">
+		<!--
+        	作者：chenhaoxiang@chaojijuhui.com
+        	时间：2017-01-19
+        	描述：导航条效果
+        	！注意，写在container包含层外面
+        	navbar-fixed-top 固定在顶部 需要为<body>设置padding-bottom:70px;
+        	navbar-fixed-bottom 固定在底部 需要为<body>设置padding-bottom:70px;
+        	navbar-inverse  反色的导航栏
+        -->
+		<nav class="navbar navbar-default navbar-static-top">
+			<!--导航栏头部信息-->
+			<div class="container">
+				<!--品牌信息-->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="">Brand</a>
+					<p class="navbar-text">欢迎光临</p>
+				</div>
+
+				<!--导航栏主链接-->
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active">
+							<a href="">起步</a>
+						</li>
+						<li>
+							<a href="">CSS全局样式</a>
+						</li>
+						<li>
+							<a href="">组件</a>
+						</li>
+						<li>
+							<a href="">插件</a>
+						</li>
+						<li>
+							<a href="">网站案例</a>
+						</li>
+					</ul>
+					<!--表单 搜索框-->
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="搜索">
+						</div>
+						<button type="submit" class="btn btn-default">搜索</button>
+					</form>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="">Link</a>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">
+								Dropdown 
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container" style="background-color: #FFFFFF;">
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：缩略图
+            -->
+			<h2 class="page-header">缩略图效果</h2>
+			<div class="row">
+				<div class="col-md-2">
+					<a href="" class="thumbnail"><img src="img/001.png" /></a>
+					<div class="caption">
+						<h4>图片一</h4>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<a href="" class="thumbnail"><img src="img/001.png" /></a>
+					<div class="caption">
+						<h4>图片一</h4>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<a href="" class="thumbnail"><img src="img/001.png" /></a>
+					<div class="caption">
+						<h4>图片一</h4>
+					</div>
+				</div>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：分页效果
+            	active 激活状态 当前页
+            	pagination-lg 大尺寸
+            	disabled 不能点击
+            -->
+			<div class="text-center" style="border: 1px solid red;">
+				<ul class="pagination pagination-lg pager">
+					<li class="previous">
+						<a href="#">&larr; 上一页</a>
+					</li>
+					<li class="disabled">
+						<a href="">&laquo;</a>
+					</li>
+					<li class="active">
+						<a href="">1</a>
+					</li>
+					<li>
+						<a href="">2</a>
+					</li>
+					<li>
+						<a href="">3</a>
+					</li>
+					<li>
+						<a href="">4</a>
+					</li>
+					<li>
+						<a href="">5</a>
+					</li>
+					<li>
+						<a href="">6</a>
+					</li>
+					<li>
+						<a href="">7</a>
+					</li>
+					<li>
+						<a href="">8</a>
+					</li>
+					<li>
+						<a href="">9</a>
+					</li>
+					<li>
+						<a href="">10</a>
+					</li>
+					<li>
+						<a href="">&raquo;</a>
+					</li>
+					<li class="next">
+						<a href="#">下一页 &rarr;</a>
+					</li>
+				</ul>
+			</div>
+			<div class="text-center" style="border: 1px solid red;">
+				<ul class="pagination pagination-lg">
+					<li>
+						<a href="">&laquo;</a>
+					</li>
+					<li class="active">
+						<a href="">1</a>
+					</li>
+					<li>
+						<a href="">2</a>
+					</li>
+					<li>
+						<a href="">3</a>
+					</li>
+					<li>
+						<a href="">4</a>
+					</li>
+					<li>
+						<a href="">5</a>
+					</li>
+					<li>
+						<a href="">6</a>
+					</li>
+					<li>
+						<a href="">7</a>
+					</li>
+					<li>
+						<a href="">8</a>
+					</li>
+					<li>
+						<a href="">9</a>
+					</li>
+					<li>
+						<a href="">10</a>
+					</li>
+					<li>
+						<a href="">&raquo;</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：路径导航
+            -->
+			<h2 class="page-header">路径导航效果</h2>
+			<ol class="breadcrumb">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Library</a>
+				</li>
+				<li class="active">Data</li>
+			</ol>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：标签页（选项卡）
+            	nav-tabs -保证排在同一行
+            	胶囊是标签页也是可以垂直方向堆叠排列的。只需添加 .nav-stacked 类。 ul上
+            -->
+			<h2 class="page-header">选项卡效果</h2>
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#">Home</a>
+				</li>
+				<li role="presentation">
+					<a href="#">Profile</a>
+				</li>
+				<li role="presentation">
+					<a href="#">Messages</a>
+				</li>
+			</ul>
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#">Home</a>
+				</li>
+				<li role="presentation">
+					<a href="#">Profile</a>
+				</li>
+				<li role="presentation">
+					<a href="#">Messages</a>
+				</li>
+			</ul>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：CSS样式-输入框组 input-group 添加在父元素
+            -->
+			<h2 class="page-header">输入框组的应用</h2>
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<input type="text" class="form-control" placeholder="username" />
+				<span class="input-group-addon">.00</span>
+			</div>
+			<div class="input-group">
+				<span class="input-group-btn">
+            		<button class="btn btn-default">Go!</button>
+            	</span>
+				<input type="text" class="form-control" placeholder="username" />
+			</div>
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#">Action</a>
+						</li>
+						<li>
+							<a href="#">Another action</a>
+						</li>
+						<li>
+							<a href="#">Something else here</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#">Separated link</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /btn-group -->
+				<input type="text" class="form-control">
+			</div>
+			<!-- /input-group -->
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default">
+            		按钮 
+            	</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            		<span class="caret"></span>
+            	</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="">按钮</a>
+						</li>
+						<li>
+							<a href="">按钮</a>
+						</li>
+						<li>
+							<a href="">按钮</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="">按钮</a>
+						</li>
+					</ul>
+				</div>
+				<input type="text" class="form-control">
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：CSS样式 -按钮式下拉菜单
+            	单按钮下拉菜单和前面下拉菜单的差不多
+            	.dropup：向上弹出的下拉菜单(下拉菜单父元素)。
+            	如果下拉菜单很多，可以用overflow
+            -->
+			<h2 class="page-header">按钮式下拉菜单的应用</h2>
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-danger" data-toggle="dropdown">
+            		按钮 
+            		<span class="caret"></span>
+            	</button>
+				<ul class="dropdown-menu" style="overflow: auto;height: 100px;">
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮1</a>
+					</li>
+					<li>
+						<a href="">按钮1</a>
+					</li>
+					<li>
+						<a href="">按钮3</a>
+					</li>
+					<li>
+						<a href="">按钮2</a>
+					</li>
+				</ul>
+				<button type="button" class="btn btn-danger">
+            		按钮 
+            	</button>
+			</div>
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-default">
+            		按钮 
+            	</button>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            		<span class="caret"></span>
+            	</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="">按钮</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：CSS组件-按钮组
+            	btn-group-vertical 按钮组垂直排序
+            -->
+			<h2 class="page-header">按钮组的应用</h2>
+			<div class="btn-toolbar">
+				<div class="btn-group btn-group-lg ">
+					<button type="button" class="btn btn-default">按钮一</button>
+					<button type="button" class="btn btn-default">按钮二</button>
+					<button type="button" class="btn btn-default">按钮三</button>
+					<button type="button" class="btn btn-default">按钮四</button>
+					<button type="button" class="btn btn-default">按钮五</button>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn btn-danger">按钮一</button>
+					<button type="button" class="btn btn-danger">按钮二</button>
+				</div>
+				<div class="btn-group btn-group-sm">
+					<button type="button" class="btn btn-primary">按钮一</button>
+					<button type="button" class="btn btn-primary">按钮二</button>
+				</div>
+				<div class="btn-group btn-group-xs btn-group-vertical">
+					<button type="button" class="btn btn-success">按钮一</button>
+					<button type="button" class="btn btn-success">按钮二</button>
+					<button type="button" class="btn btn-success">按钮三</button>
+				</div>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：CSS组件-下拉菜单的应用
+            	data-toggle属性：下拉菜单触发器。取值为“dropdown”。给button添加
+            	divider -添加分割线
+            -->
+			<h2 class="page-header">下拉菜单的应用</h2>
+			<div class="dropdown">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					Java课 
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="">HTML</a>
+					</li>
+					<li>
+						<a href="">CSS</a>
+					</li>
+					<li>
+						<a href="">Java</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="">Maven</a>
+					</li>
+					<li>
+						<a href="">MySQL</a>
+					</li>
+					<li>
+						<a href="">Spring</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：辅助类样式
+            	浮动  有pull-left左浮动和pull-right右浮动 -div必须要定一个框，可以正好是比2个图片的框长一点
+            	清除浮动 -给父元素加的！ clearfix
+            	倒三角符  <span class="caret"></span>
+            -->
+			<h2 class="page-header">清除浮动的应用</h2>
+			<div class="clearfix" style="border: 1px solid red;width: 340px;">
+				<ul class="list-unstyled">
+					<li class="pull-left" style="padding: 10px;">
+						<div class="text-center">
+							<a href=""><img src="img/001.png" /></a><br />
+							<a href="">文字1</a>
+							<span class="caret"></span>
+						</div>
+					</li>
+					<li class="pull-left" style="padding: 10px;">
+						<div class="text-center">
+							<a href=""><img src="img/002.png" /></a><br />
+							<a href="">文字2</a>
+						</div>
+					</li>
+					<li class="pull-left" style="padding: 10px;">
+						<div class="text-center">
+							<a href=""><img src="img/003.png" /></a><br />
+							<a href="">文字3</a>
+						</div>
+					</li>
+					<li class="pull-left" style="padding: 10px;">
+						<div class="text-center">
+							<a href=""><img src="img/004.png" /></a><br />
+							<a href="">文字4</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!--
+            	作者：chenhaoxiang@chaojijuhui.com
+            	时间：2017-01-19
+            	描述：图片样式应用  
+            	page-header会在下面加一条修饰线
+            	img-responsive 图片响应式缩放
+            	img-rounded 圆角图片
+            	img-circle 图片变成圆形
+            	img-thumbnail 给图片加一个圆角的边框
+            	center-block 给图片居中  
+            -->
+			<h2 class="page-header">图片样式应用</h2>
+			<div>
+				<img class="img-responsive img-thumbnail center-block" src="img/011.jpg" />
+				<p>文字文字文字文字文字文字文字文字文字文字文字文字</p>
+			</div>
+
+		</div>
+		<script type="text/javascript" src="js/jquery.slim.min.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+
+</html>
